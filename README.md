@@ -18,7 +18,7 @@ The submitted code includes
 1. The [project notebook](./P1.ipynb)
 2. An [HTML export](P1.html) of the project notebook
 3. Another [notebook](./parameters_test.ipynb) that I used to test the different parameters to identify the best configuration. Later, I used my [pipeline tuning tool][1] to get the best configuration.
-4. A [log file](./P1_info_out.log) that includes the log of the different runs for the pipelines steps across the multiple trials.
+
 
 Writeup
 ---
