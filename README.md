@@ -8,49 +8,29 @@ Overview
 
 When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
 
-In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
+In this project I developed a pipeline and I configured it to be able to apply it on the following:
+- Images in the [test_images](./test_images) folder. The output of the annotated images are in the [test_images_output](./test_images_output) folder
+- Videos in the [test_videos](./test_images) folder. The output of the annotated videos are in the [test_videos_output](./test_videos_output) folder
 
-To complete the project, two files will be submitted: a file containing project code and a file containing a brief write up explaining your solution. We have included template files to be used both for the [code](https://github.com/udacity/CarND-LaneLines-P1/blob/master/P1.ipynb) and the [writeup](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md).The code file is called P1.ipynb and the writeup template is writeup_template.md 
-
-To meet specifications in the project, take a look at the requirements in the [project rubric](https://review.udacity.com/#!/rubrics/322/view)
-
-
-Creating a Great Writeup
+Project Code
 ---
-For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
+The submitted code includes 
+1. The [project notebook](./P1.ipynb)
+2. An [HTML export](P1.html) of the project notebook
+3. Another [notebook](./parameters_test.ipynb) that I used to test the different parameters to identify the best configuration. Later, I used my [pipeline tuning tool][1] to get the best configuration.
+4. A [log file](./P1_info_out.log) that includes the log of the different runs for the pipelines steps across the multiple trials.
 
-1. Describe the pipeline
-
-2. Identify any shortcomings
-
-3. Suggest possible improvements
-
-We encourage using images in your writeup to demonstrate how your pipeline works.  
-
-All that said, please be concise!  We're not looking for you to write a book here: just a brief description.
-
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup. Here is a link to a [writeup template file](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). 
-
-
-The Project
+Writeup
 ---
 
-## If you have already installed the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) you should be good to go!   If not, you should install the starter kit to get started on this project. ##
+The submitted [writeup documentation](./writeup.md) contains the following sections:
 
-**Step 1:** Set up the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) if you haven't already.
+- **Pipeline Description** which contains the description and the diagrams that explains the sequence of steps used to build the pipeline
+- **Pipeline Configuration** which explains the changes in the configuration used from the images to the videos till the challenge video.
+- **Potential Shortcomings** that I identified during the implementation and testing of the project like the changes in the design of the pipeline, the problem with the vertical lines, and the noise ines due to the shadows in the challenge video.
+- **Possible Improvements** I described some of the improvements and I applied that in my [pipeline tuning tool][1] 
+- **Rased Questions with no answers yet** which I kept asking myself and I didn't find an answer for it yet at this stage of the course. For example what if the road has no lanes, how can we overcome that. Like when driving in the desert?
 
-**Step 2:** Open the code in a Jupyter Notebook
+[//]: # (Link References)
 
-You will complete the project code in a Jupyter notebook.  If you are unfamiliar with Jupyter Notebooks, check out [Udacity's free course on Anaconda and Jupyter Notebooks](https://classroom.udacity.com/courses/ud1111) to get started.
-
-Jupyter is an Ipython notebook where you can run blocks of code and see results interactively.  All the code for this project is contained in a Jupyter notebook. To start Jupyter in your browser, use terminal to navigate to your project directory and then run the following command at the terminal prompt (be sure you've activated your Python 3 carnd-term1 environment as described in the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) installation instructions!):
-
-`> jupyter notebook`
-
-A browser window will appear showing the contents of the current directory.  Click on the file called "P1.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to complete the project.  
-
-**Step 3:** Complete the project and submit both the Ipython notebook and the project writeup
-
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
-
+[1]: https://github.com/abou7abiba/opencv-gui-pipline-tuner
